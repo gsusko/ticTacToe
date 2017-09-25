@@ -4,6 +4,7 @@
   "description": "",
   "main": "ticTacToe.js",
   "dependencies": {
+    "prompt": "^1.0.0"
   },
   "devDependencies": {},
   "scripts": {
