@@ -1,0 +1,15 @@
+{
+  "name": "ticTacToe",
+  "version": "1.0.0",
+  "description": "",
+  "main": "ticTacToe.js",
+  "dependencies": {
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ticTacToe.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
