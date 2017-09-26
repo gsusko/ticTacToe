@@ -1,25 +1,17 @@
-var prompt = require('prompt');
+var prompt = require('readline-sync');
 
-prompt.start();
+var TicTacToe = function() {
+  this.board = [[1,2,3], [4,5,6], [7,8,9]];
+  this.player = 'x';
+  this.moves = 0;
 
-var board = [[1,2,3], [4,5,6], [7,8,9]];
-console.log(board);
+}
 
-var winningCombos = [[1, 5, 9], [1, 4, 7], [1, 2, 3], [2, 5, 8], [3, 5, 7], [3, 6, 9], [4, 5, 6], [7, 8, 9]];
+TicTacToe.prototype.printBoard = function() {
+  console.log(`${this.board[0][0]} | ${this.board[0][1]} | ${this.board[0][2]}`);
+  console.log(`${this.board[1][0]} | ${this.board[1][1]} | ${this.board[1][2]}`);
+  console.log(`${this.board[2][0]} | ${this.board[2][1]} | ${this.board[2][2]}`);
+}
 
-prompt.get(['move'], (err, results) => {
-  if (err) {
-    throw err;
-  }
-  if (typeof JSON.parse(results.move) !== 'number') {
-    console.log('unable to make move');
-  } else {
-    console.log('added x to space ' + results.move);
-
-  }
-});
-
-function onErr(err) {
-   console.log(err);
-   return 1;
- }
+var game = new TicTacToe();
+game.printBoard();
